@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, HttpResponse
-from .models import Genre, Track
+from .models import Genre, Track, Artist
 from .forms import GenreForm, TrackForm
 
 # главная
@@ -22,6 +22,12 @@ def tracks(request):
     # получем список жанров
     genres = Genre.objects.all()
     return render(request, 'tracks.html', {'genres': genres, 'tracks': tracks})
+
+# список треков
+def artists(request):
+    # получем список исполнителей из базы
+    a = Artist.objects.all()
+    return render(request, 'artists.html', {'artists': a})
 
 
 
