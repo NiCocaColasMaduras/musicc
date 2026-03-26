@@ -1,15 +1,10 @@
 from django import forms
-from .models import Genre, Track
- 
-#class GenreForm(forms.Form):
-    #name_ru = forms.CharField(label='Название на русском')
-    #name_en = forms.CharField(label='Название на английском')
-    #description = forms.CharField(label='Описание', widget=forms.Textarea)
+from .models import Genre, Track, Artist
 
 class GenreForm(forms.ModelForm):
     class Meta:
         model = Genre
-        fields = '__all__'
+        fields = ['name_ru', 'name_en', 'description']
         labels = {
             'name_ru': 'Название на русском',
             'name_en': 'Название на английском',
@@ -22,6 +17,16 @@ class TrackForm(forms.ModelForm):
         fields = '__all__'
         labels = {
             'title': 'Название',
-            'duration': 'Длительность',
+            'duration': 'Продолжительность',
             'genres': 'Жанры',
+            'audio_file': 'Аудиофайл',
+        }
+
+class ArtistForm(forms.ModelForm):
+    class Meta:
+        model = Artist
+        fields = '__all__'
+        labels = {
+            'name': 'Имя / название',
+            'image': 'Фотография',
         }
