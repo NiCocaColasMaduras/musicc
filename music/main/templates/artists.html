@@ -9,6 +9,7 @@
             <th>Название</th>
             <th>Фото</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <!-- тело таблицы -->
@@ -17,7 +18,7 @@
         <tr>
             <td>{{ a.id }}</td>
             <td>{{ a.name }}</td>
-            <td><img class="artist_logo" src="/media/{{ a.image }}" alt="{{ a.name }}"></td>
+            <td><img class="artist_logo" src="media/{{ a.image }}" alt=""></td>
             <td><a href="/editartist/{{ a.id }}">Редактировать</a></td>
             <td><a href="/deleteartist/{{ a.id }}">Удалить</a></td>
         </tr>

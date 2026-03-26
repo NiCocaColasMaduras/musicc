@@ -9,7 +9,7 @@ urlpatterns = [
     path('', views.index),
     path('genres', views.genres),
     path('tracks', views.tracks),
-    path('artists/', views.artists),
+    path('artists', views.artists),
 
     path('addgenre', views.add_genre),
     path('editgenre/<int:id_genre>', views.edit_genre),
