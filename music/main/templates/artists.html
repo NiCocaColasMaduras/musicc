@@ -11,6 +11,7 @@
             <th>Треки</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <!-- тело таблицы -->
@@ -19,12 +20,16 @@
         <tr>
             <td>{{ a.id }}</td>
             <td>{{ a.name }}</td>
+<<<<<<< HEAD
             <td><img class="artist_logo" src="/media/{{ a.image }}" alt="{{ a.name }}"></td>
             <td>
                 {% for t in tracks.artist.all %} 
                     {{t.name}},
                 {% endfor %}
             </td>
+=======
+            <td><img class="artist_logo" src="media/{{ a.image }}" alt=""></td>
+>>>>>>> master
             <td><a href="/editartist/{{ a.id }}">Редактировать</a></td>
             <td><a href="/deleteartist/{{ a.id }}">Удалить</a></td>
         </tr>
