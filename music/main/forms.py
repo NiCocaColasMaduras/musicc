@@ -19,6 +19,7 @@ class TrackForm(forms.ModelForm):
             'title': 'Название',
             'duration': 'Продолжительность',
             'genres': 'Жанры',
+            'artist': 'Исполнитель',
             'audio_file': 'Аудиофайл',
         }
 

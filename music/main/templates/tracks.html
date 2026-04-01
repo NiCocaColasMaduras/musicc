@@ -2,6 +2,19 @@
 {% block title %}Жанры{% endblock title %}
 
 {% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <select name="artist" onchange="this.form.submit()">
+            {% for artist in artists %}
+                {% if artist in artists %}
+                    <option value="{{artist.id}}" selected>{{artist}}</option>
+                {% else %}
+                    <option value="{{artist.id}}">{{artist}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+    </form>
+
     <table>
         <thead>
             <tr>

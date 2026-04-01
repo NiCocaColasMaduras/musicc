@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Исполнители{% endblock title %}
+
+{% block content %}
+    <h1>Форма для добавления исполнителя</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Сохранить">
+    </form>
+{% endblock content %}

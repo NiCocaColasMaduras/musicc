@@ -9,7 +9,7 @@ urlpatterns = [
     path('', views.index),
     path('genres', views.genres),
     path('tracks', views.tracks),
-    path('artists/', views.artists),
+    path('artists', views.artists),
 
     path('addgenre', views.add_genre),
     path('editgenre/<int:id_genre>', views.edit_genre),
@@ -19,4 +19,7 @@ urlpatterns = [
     path('edittrack/<int:id_track>', views.edit_track),
     path('deletetrack/<int:id_track>', views.delete_track),
 
+    path('addartist', views.add_artist),
+    path('editartist/<int:id_artist>', views.edit_artist),
+    path('deleteartist/<int:id_artist>', views.delete_artist),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
